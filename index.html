@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenida! - Crochet Dreams</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🧶</div>
+                <span class="logo-text">Crochet Dreams</span>
+            </div>
+            <div class="admin-info">
+                <div class="admin-badge">
+                    <span class="admin-letter">C</span>
+                </div>
+                <div class="admin-details">
+                    <span class="admin-name">Celina Martínez</span>
+                    <span class="admin-role">Administrador</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="welcome-container">
+            <!-- Header de Bienvenida -->
+            <div class="header-section">
+                <div class="icon-decoration">🎉</div>
+                <h1 class="main-title">¡Bienvenida, Celina!</h1>
+                <p class="subtitle">Tu cuenta de administrador está lista. Aquí están tus credenciales de acceso</p>
+            </div>
+
+            <!-- Card de Credenciales -->
+            <div class="credentials-card">
+                <div class="card-header">
+                    <h2>Credenciales de Acceso</h2>
+                    <span class="badge-new">NUEVO</span>
+                </div>
+
+                <div class="credentials-content">
+                    <div class="welcome-message">
+                        <div class="welcome-emoji">👋</div>
+                        <p>¡Hola! Te damos la bienvenida al sistema de administración de <strong>Crochet Dreams</strong>. Estamos emocionados de tenerte como parte del equipo.</p>
+                    </div>
+
+                    <div class="credentials-box">
+                        <div class="credential-item">
+                            <div class="credential-icon">👤</div>
+                            <div class="credential-info">
+                                <label>Usuario</label>
+                                <div class="credential-value">
+                                    <span id="username" class="masked-text">••••••••@crochetdreams.com</span>
+                                    <button class="copy-btn" onclick="copyToClipboard('username')">
+                                        📋
+                                    </button>
+                                    <button class="toggle-btn" onclick="toggleVisibility('username', 'celina.martinez@crochetdreams.com')">
+                                        👁️
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="credential-item">
+                            <div class="credential-icon">🔒</div>
+                            <div class="credential-info">
+                                <label>Contraseña Temporal</label>
+                                <div class="credential-value">
+                                    <span id="password" class="masked-text">••••••••••••••</span>
+                                    <button class="copy-btn" onclick="copyToClipboard('password')">
+                                        📋
+                                    </button>
+                                    <button class="toggle-btn" onclick="toggleVisibility('password', 'CrochetDreams2024!')">
+                                        👁️
+                                    </button>
+                                </div>
+                                <small class="warning-text">⚠️ Cambia tu contraseña después del primer inicio de sesión</small>
+                            </div>
+                        </div>
+
+                        <div class="credential-item">
+                            <div class="credential-icon">🌐</div>
+                            <div class="credential-info">
+                                <label>URL de Acceso</label>
+                                <div class="credential-value">
+                                    <span id="url">http://127.0.0.1:9000/admin</span>
+                                    <button class="copy-btn" onclick="copyToClipboard('url')">
+                                        📋
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="credential-item">
+                            <div class="credential-icon">🎯</div>
+                            <div class="credential-info">
+                                <label>Rol Asignado</label>
+                                <div class="credential-value">
+                                    <span class="role-badge">Administrador Principal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="important-notes">
+                        <h3>📝 Notas Importantes</h3>
+                        <ul>
+                            <li>Guarda estas credenciales en un lugar seguro</li>
+                            <li>La contraseña debe cambiarse en tu primer acceso</li>
+                            <li>Tu cuenta tiene acceso completo a todas las funcionalidades</li>
+                            <li>Puedes contactar a soporte técnico en cualquier momento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="window.location.href='http://127.0.0.1:9000/admin'">
+                        Acceder al Sistema
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    <button class="btn-secondary" onclick="window.print()">
+                        Imprimir Credenciales
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recursos de Ayuda -->
+            <div class="help-section">
+                <div class="help-card">
+                    <div class="help-icon">📚</div>
+                    <div class="help-content">
+                        <h3>¿Necesitas ayuda?</h3>
+                        <p>Consulta nuestra documentación completa o contacta al equipo de soporte</p>
+                        <div class="help-links">
+                            <a href="#" class="help-link">Ver Documentación</a>
+                            <a href="#" class="help-link">Contactar Soporte</a>
+                            <a href="#" class="help-link">Video Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Crochet Dreams - Plataforma E-Commerce</p>
+        <p class="footer-support">¿Problemas para acceder? <a href="mailto:soporte@crochetdreams.com">Contacta soporte</a></p>
+    </footer>
+
+    <script>
+        // Almacenar los valores reales ocultos
+        const hiddenValues = {
+            username: 'celina.martinez@crochetdreams.com',
+            password: 'CrochetDreams2024!',
+            url: 'http://127.0.0.1:9000/admin'
+        };
+
+        const maskedValues = {
+            username: '••••••••@crochetdreams.com',
+            password: '••••••••••••••'
+        };
+
+        let visibilityState = {
+            username: false,
+            password: false
+        };
+
+        function toggleVisibility(elementId, realValue) {
+            const element = document.getElementById(elementId);
+            const toggleBtn = element.parentElement.querySelector('.toggle-btn');
+            
+            if (visibilityState[elementId]) {
+                // Ocultar
+                element.textContent = maskedValues[elementId];
+                element.classList.add('masked-text');
+                toggleBtn.textContent = '👁️';
+                visibilityState[elementId] = false;
+            } else {
+                // Mostrar
+                element.textContent = realValue;
+                element.classList.remove('masked-text');
+                toggleBtn.textContent = '🙈';
+                visibilityState[elementId] = true;
+            }
+        }
+
+        function copyToClipboard(elementId) {
+            // Siempre copiar el valor real, incluso si está oculto
+            const text = hiddenValues[elementId];
+            
+            navigator.clipboard.writeText(text).then(() => {
+                // Mostrar feedback visual
+                const element = document.getElementById(elementId);
+                const copyBtn = element.parentElement.querySelector('.copy-btn');
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = '✓';
+                copyBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                copyBtn.style.color = 'white';
+                
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                    copyBtn.style.background = '';
+                    copyBtn.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                alert('Error al copiar: ' + err);
+            });
+        }
+
+        // Mostrar animación de entrada
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.credentials-card, .module-card, .help-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
