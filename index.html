@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida - CrochetDreams</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+    </div>
+
+    <div class="container">
+        <div class="welcome-card">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <svg viewBox="0 0 100 100" class="yarn-icon">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <path d="M 30 50 Q 50 30, 70 50 T 70 70" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                        <circle cx="75" cy="25" r="4" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="welcome-title">¡Bienvenida a tu Nueva Tienda!</h1>
+            <h2 class="store-name">CrochetDreams</h2>
+            <p class="welcome-message">Tu espacio de tejido artesanal ahora está listo</p>
+
+            <div class="credentials-container">
+                <div class="credential-item">
+                    <label class="credential-label">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Correo electrónico
+                    </label>
+                    <div class="credential-value-container">
+                        <input type="text" class="credential-value" id="email" value="celinamartinez@gmail.com" readonly>
+                        <button class="toggle-btn" onclick="toggleVisibility('email', 'emailIcon')">
+                            <svg id="emailIcon" class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                        <button class="copy-btn" onclick="copyToClipboard('email')">
+                            <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="credential-item">
+                    <label class="credential-label">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                        Contraseña
+                    </label>
+                    <div class="credential-value-container">
+                        <input type="password" class="credential-value" id="password" value="Celina@3452" readonly>
+                        <button class="toggle-btn" onclick="toggleVisibility('password', 'passwordIcon')">
+                            <svg id="passwordIcon" class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                        <button class="copy-btn" onclick="copyToClipboard('password')">
+                            <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-message">
+                <div class="security-notice">
+                    <svg class="security-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Guarda estas credenciales en un lugar seguro</span>
+                </div>
+            </div>
+
+            <div class="gratitude-section">
+                <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                <h3 class="gratitude-title">Gracias por Confiar en Nosotros</h3>
+                <p class="gratitude-text">
+                    Estamos emocionados de ser parte de tu emprendimiento. Te deseamos mucho éxito 
+                    en esta nueva aventura y esperamos que CrochetDreams se convierta en el espacio 
+                    perfecto para compartir tu pasión por el tejido artesanal con el mundo.
+                </p>
+                <p class="gratitude-signature">¡Que este sea el inicio de grandes logros!</p>
+            </div>
+
+            <a href="#" class="cta-button">
+                Comenzar a Vender
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">¡Copiado al portapapeles!</div>
+
+    <script>
+        // Animación de entrada
+        window.addEventListener('load', () => {
+            document.querySelector('.welcome-card').classList.add('show');
+        });
+
+        // Toggle visibilidad de contraseña/email
+        function toggleVisibility(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+            
+            if (input.type === 'password' || input.classList.contains('hidden')) {
+                input.type = 'text';
+                input.classList.remove('hidden');
+                icon.innerHTML = `
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                    <line x1="1" y1="1" x2="23" y2="23"/>
+                `;
+            } else {
+                input.type = 'password';
+                input.classList.add('hidden');
+                icon.innerHTML = `
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                `;
+            }
+        }
+
+        // Copiar al portapapeles
+        function copyToClipboard(inputId) {
+            const input = document.getElementById(inputId);
+            const tempInput = document.createElement('input');
+            tempInput.value = input.value;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            
+            showToast();
+        }
+
+        // Mostrar notificación de copiado
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
